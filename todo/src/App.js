@@ -1,8 +1,9 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { count, length } from './number';
 
-const count = 25;
+const counts = 25;
 const develop = true;
 const user = false;
 
@@ -20,10 +21,13 @@ function App() {
           Hello!
         </p>
         <p> 
+        	Общая длина: { count * length }
+        </p>
+        <p> 
           {'33'}
         </p>
         <p> 
-          {count}
+          {counts}
         </p>
         <p> 
           {2 + 3}
