@@ -4,10 +4,10 @@ import InputItem from '../InputItem/InputItem';
 import Footer from '../Footer/Footer';
 import styles from './App.module.css';
 
-const todoItem = 'Покормить кота';
 
-const App = () => {
-	const items = [
+class App extends React.Component {
+	render() {
+		const items = [
 		{
 			value: 'Покормить кота',
 			isDone: true
@@ -29,6 +29,7 @@ return (
 		<ItemList items={items} />
 		<Footer count= {1} />
 	</div>);
-}
+	}
+};
 
 export default App; 
