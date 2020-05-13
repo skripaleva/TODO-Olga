@@ -40,7 +40,7 @@ onClickDone = id => {
 	this.setState({items: newItemList});
 };
 
-onClickDelete = id =>{
+onClickDelete = id => {
         const newItemList = this.state.items.filter(item => item.id !== id);
         this.setState({items: newItemList});
 };
