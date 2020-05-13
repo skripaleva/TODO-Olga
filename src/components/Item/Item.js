@@ -7,7 +7,7 @@ import IconButton from '@material-ui/core/IconButton';
 
 
 
-const Item = ({value, isDone, onClickDone, id}) => ( <div className={styles.flex}>
+const Item = ({value, isDone, onClickDone, id, onClickDelete}) => ( <div className={styles.flex}>
 	<div>
 	  <Checkbox 
 	    checked={isDone}
@@ -25,7 +25,9 @@ const Item = ({value, isDone, onClickDone, id}) => ( <div className={styles.flex
 	</div>
 <div>
      <IconButton aria-label="delete" >
-        <DeleteIcon />
+        <DeleteIcon 
+        	onClick={() => onClickDelete(id)}
+        />
         </IconButton>
 </div>
 </div>);
