@@ -67,7 +67,7 @@ render() {
 			<h1 className={styles.title}>Список дел на сегодня:</h1>
 			<InputItem onClickAdd={this.onClickAdd} />
 			<ItemList items={this.state.items} onClickDone={this.onClickDone} onClickDelete={this.onClickDelete} />
-			<Footer count= {1} />
+			<Footer count={1} />
 		</div>);
 	}
 };

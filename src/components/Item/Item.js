@@ -32,5 +32,8 @@ const Item = ({value, isDone, onClickDone, id, onClickDelete}) => ( <div classNa
 </div>
 </div>);
 
+Item.defaultProps = {
+    value: 'У вас не запланировано новых дел'
+}
 
 export default Item;

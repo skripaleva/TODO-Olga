@@ -16,4 +16,8 @@ const Footer = ({ count }) =>
         <Button variant="contained">Удалить все</Button>
     </div>;
 
+Footer.defaultProps = {
+        count: 0
+};
+
 export default Footer;
