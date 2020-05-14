@@ -16,7 +16,7 @@ const ItemList = ( {items, onClickDone, onClickDelete} ) => (<ul className={styl
 </ul>);
 
 Item.propTypes = {
-	items: PropTypes.array.isRequired,
+	items: PropTypes.array,
 	onClickDone: PropTypes.func.isRequired,
 	onClickDelete: PropTypes.func.isRequired
 }

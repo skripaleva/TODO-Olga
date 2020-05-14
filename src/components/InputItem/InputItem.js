@@ -52,7 +52,7 @@ return (
 
 InputItem.propTypes = {
     onClickAdd: PropTypes.func.isRequired,
-    onButtonClick: PropTypes.func.isRequired
+    onButtonClick: PropTypes.func
 };
 
 export default InputItem;

@@ -6,9 +6,23 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import IconButton from '@material-ui/core/IconButton';
 import PropTypes from 'prop-types'
 
+class Item extends React.Component {
+    componentDidMount() {
+        console.log('componentDivMount');
+    }
 
+    componentDidUpdate() {
+        console.log('componentDivUpdate');
+    }
 
-const Item = ({value, isDone, onClickDone, id, onClickDelete}) => ( <div className={styles.flex}>
+    componentWillUnmount() {
+        console.log('componentWillUnmount');
+    }
+
+    render() {
+    	const { value, isDone, onClickDone, id, onClickDelete } = this.props;
+
+    	return (<div className={styles.flex}>
 	<div>
 	  <Checkbox 
 	    checked={isDone}
@@ -30,8 +44,10 @@ const Item = ({value, isDone, onClickDone, id, onClickDelete}) => ( <div classNa
         	onClick={() => onClickDelete(id)}
         />
         </IconButton>
-</div>
+	</div>
 </div>);
+	}
+};
 
 Item.defaultProps = {
     value: 'У вас не запланировано новых дел'
