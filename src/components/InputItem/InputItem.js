@@ -3,6 +3,7 @@ import styles from './InputItem.module.css';
 import TextField from '@material-ui/core/TextField';
 import IconButton from '@material-ui/core/IconButton';
 import AddBoxIcon from '@material-ui/icons/AddBox';
+import PropTypes from 'prop-types'
 
 class InputItem extends React.Component {
 	state = {
@@ -45,8 +46,13 @@ return (
                 	onClick={this.onButtonClick} 
                 />
      </IconButton>
-
 </div>);
   }
 };
+
+InputItem.propTypes = {
+    onClickAdd: PropTypes.func.isRequired,
+    onButtonClick: PropTypes.func.isRequired
+};
+
 export default InputItem;
