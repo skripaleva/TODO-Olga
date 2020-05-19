@@ -1,8 +1,24 @@
-.wrap {
-	margin: auto;
-	width: 650px;
+body {
+	background-color: #FCE4EC;
 }
 
-.title {
-	font-family: 'Georgia';
+.wrap {
+	display: flex;
+	justify-content: space-between;
+    margin: auto;
+    width: 800px;
+    padding-top: 10px;
+}
+
+.link {
+	text-decoration: none;
+	color: black;
+}
+
+.sidebar {
+	width: 150px;	
+	background-color: white;
+	border: hidden;
+	border-radius: 10px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
 }
