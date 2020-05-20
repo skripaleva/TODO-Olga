@@ -25,15 +25,11 @@ const Todo = () => {
 				id: 3
 			}
 		],
-
 		count: 3,
 	};
 
 const [items, setItems] = useState(initialState.items);
 const [count, setCount] = useState(initialState.count);
-
-useEffect(() => {console.log('componentDidMount')}, []);
-useEffect(() => {console.log('componentDidUpdate')});	
 
 const onClickDone = id => {
 	const newItemList = items.map(item => {
@@ -65,8 +61,7 @@ const onClickAdd = value => {
 
 	setItems(newItemList);
 	setCount(count => count + 1);
-
-}
+};
 
 	return (
 		<div className={styles.content}>
