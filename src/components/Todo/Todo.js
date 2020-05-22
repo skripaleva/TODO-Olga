@@ -4,8 +4,8 @@ import InputItem from '../InputItem/InputItem';
 import Footer from '../Footer/Footer';
 import styles from './Todo.module.css';
 
-
 const Todo = () => {
+	
 	const initialState = {
 		items: [
 			{

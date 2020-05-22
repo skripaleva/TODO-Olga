@@ -3,7 +3,7 @@ import styles from './Contacts.module.css';
 
 const Contacts = () => (
     <div className={styles.wrap}>
-      <h1>Контакты</h1>
+        <h1>Контакты</h1>
     </div>
 );
 
