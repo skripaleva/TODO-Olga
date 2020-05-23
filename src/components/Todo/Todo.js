@@ -5,7 +5,7 @@ import Footer from '../Footer/Footer';
 import styles from './Todo.module.css';
 
 const Todo = () => {
-	
+
 	const initialState = {
 		items: [
 			{
