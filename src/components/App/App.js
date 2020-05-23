@@ -18,11 +18,11 @@ const App = () => (<Router>
             <Link to='/contacts' className={styles.link}>
                 <MenuItem>Контакты</MenuItem></Link>
         </MenuList>
-    <div>
-        <Route path='/' exact component={About} />
-        <Route path='/todo' component={Todo} />
-        <Route path='/contacts' component={Contacts} />
-    </div>
+            <div>
+                <Route path='/' exact component={About} />
+                <Route path='/todo' component={Todo} />
+                <Route path='/contacts' component={Contacts} />
+            </div>
     </div>
 </Router>);
 
