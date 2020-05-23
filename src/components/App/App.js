@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Link,} from 'react-router-dom';
 import Todo from '../Todo/Todo';
 import About from '../About/About';
 import Contacts from '../Contacts/Contacts';
@@ -17,7 +17,7 @@ const App = () =>
             <MenuItem>Дела</MenuItem></Link>
             <Link to='/contacts' className={styles.link}>
             <MenuItem>Контакты</MenuItem></Link>
-        </MenuList> 
+        </MenuList>
         <div>
             <Route path='/' exact component={About} />
             <Route path='/todo' component={Todo} />
