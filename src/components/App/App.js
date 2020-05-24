@@ -23,9 +23,9 @@ const App = () => (<Router>
                 <MenuItem>Контакты</MenuItem></Link>
         </MenuList>
             <div>
-                    <Route path='/' exact component={About} />
-                    <Route path='/todo' component={Todo} />
-                    <Route path='/contacts' component={Contacts} />
+                <Route path='/' exact component={About} />
+                <Route path='/todo' component={Todo} />
+                <Route path='/contacts' component={Contacts} />
             </div>
     </div>
 </Router>);
