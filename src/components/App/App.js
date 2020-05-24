@@ -17,10 +17,10 @@ const App = () => (<Router>
     <MenuList className={styles.sidebar}>
       <Link to='/' className={styles.link}>
         <MenuItem>Обо мне</MenuItem></Link>
-          <Link to='/todo' className={styles.link}>
-            <MenuItem>Дела</MenuItem></Link>
-          <Link to='/contacts' className={styles.link}>
-            <MenuItem>Контакты</MenuItem></Link>
+      <Link to='/todo' className={styles.link}>
+        <MenuItem>Дела</MenuItem></Link>
+      <Link to='/contacts' className={styles.link}>
+        <MenuItem>Контакты</MenuItem></Link>
     </MenuList>
     <div>
       <Route path='/' exact component={About} />
