@@ -72,4 +72,4 @@ const onClickAdd = value => {
 		</div>);
 	};
 
-export default Todo; 
+export default Todo;
