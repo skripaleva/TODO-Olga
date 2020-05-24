@@ -13,7 +13,7 @@ import MenuList from '@material-ui/core/MenuList';
 import styles from './App.module.css';
 
 const App = () => (<Router>
-	<div className={styles.wrap}>
+    <div className={styles.wrap}>
         <MenuList className={styles.sidebar}>
             <Link to='/' className={styles.link}>
                 <MenuItem>Обо мне</MenuItem></Link>
@@ -22,11 +22,11 @@ const App = () => (<Router>
             <Link to='/contacts' className={styles.link}>
                 <MenuItem>Контакты</MenuItem></Link>
         </MenuList>
-    <div>
-        <Route path='/' exact component={About} />
-        <Route path='/todo' component={Todo} />
-        <Route path='/contacts' component={Contacts} />
-    </div>
+            <div>
+                <Route path='/' exact component={About} />
+                <Route path='/todo' component={Todo} />
+                <Route path='/contacts' component={Contacts} />
+            </div>
     </div>
 </Router>);
 
