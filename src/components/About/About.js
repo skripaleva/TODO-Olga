@@ -1,6 +1,6 @@
 import React from 'react';
-import { 
-  Octokit, 
+import {
+  Octokit,
 } from '@octokit/rest';
 import styles from './About.module.css';
 import CircularProgress from '@material-ui/core/CircularProgress';
@@ -21,9 +21,7 @@ class About extends React.Component {
 
     octokit.repos.listForUser({
       username: this.state.username,
-    })
-
-    .then(({ data }) => {
+    }).then(({ data }) => {
       this.setState({
         repoList: data,
         isLoading: false,
@@ -33,16 +31,18 @@ class About extends React.Component {
       .catch(() => {
         this.setState({
           isError: true,
-          isLoading: false
-        })
+          isLoading: false,
+        });
+
     });
 
     octokit.users.getByUsername({
-      username: this.state.username
+      username: this.state.username,
         }).then((response) => {
+
           this.setState({
             avatarURL: response.data.avatar_url,
-            name: response.data.name
+            name: response.data.name,
         });
     })
 
@@ -55,16 +55,17 @@ class About extends React.Component {
     }
 
     render () {
-      const { 
-        isLoading, 
-        repoList, 
-        isError, 
-        name, 
+
+      const {
+        isLoading,
+        repoList,
+        isError,
+        name,
         avatarURL,
       } = this.state;
         return (
           <div className={styles.wrap}>
-            {isLoading ? <div className={styles.loader}> 
+            {isLoading ? <div className={styles.loader}>
             <CircularProgress /> </div> :
               <div className={styles.info}>
                 <h1 className={styles.name}>{name}</h1>
@@ -77,7 +78,8 @@ class About extends React.Component {
                     <p className={styles.repo_text}> Мои репозитории:</p>
                     <ol className={styles.repo_list}>
                       {repoList.map(repo => (<li key={repo.id}>
-                        <a href={repo.id} className={styles.repo_name}>{repo.name}</a>
+                        <a href={repo.id} 
+                          className={styles.repo_name}>{repo.name}</a>
                       </li>
                     ))}
                     </ol>
