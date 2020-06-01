@@ -21,13 +21,18 @@ class About extends React.Component {
 
     octokit.repos.listForUser({
       username: this.state.username,
-    }).then(({data}) => {
+    }).then((
+      {
+        data
+      }) => {
+
       this.setState({
         repoList: data,
         isLoading: false,
       });
-    
+
     })
+
 
       .catch(() => {
 
@@ -55,6 +60,7 @@ class About extends React.Component {
               isError: true,
             });
         });
+
 
     }
 
@@ -94,6 +100,7 @@ class About extends React.Component {
             }
           </div>
         );
+        
     }
 
 };
