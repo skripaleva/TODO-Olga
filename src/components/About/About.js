@@ -17,18 +17,20 @@ class About extends React.Component {
         username: 'MylnikovaO',
   };
 
-  componentDidMount() {
+  componentDidMount () {
 
     octokit.repos.listForUser({
       username: this.state.username,
-    }).then(({ data }) => {
+    }).then(({data}) => {
       this.setState({
         repoList: data,
         isLoading: false,
       });
+    
     })
 
       .catch(() => {
+
         this.setState({
           isError: true,
           isLoading: false,
@@ -47,11 +49,13 @@ class About extends React.Component {
     })
 
           .catch(err => {
+
             this.setState({
               isLoading: false,
               isError: true,
             });
         });
+
     }
 
     render () {
@@ -78,7 +82,7 @@ class About extends React.Component {
                     <p className={styles.repo_text}> Мои репозитории:</p>
                     <ol className={styles.repo_list}>
                       {repoList.map(repo => (<li key={repo.id}>
-                        <a href={repo.id} 
+                        <a href={repo.id}
                           className={styles.repo_name}>{repo.name}</a>
                       </li>
                     ))}
