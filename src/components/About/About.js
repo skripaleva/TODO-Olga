@@ -45,9 +45,7 @@ class About extends React.Component {
 
     octokit.users.getByUsername({
       username: this.state.username,
-        }).then(
-
-        (response) => {
+        }).then(response => {
 
           this.setState({
             avatarURL: response.data.avatar_url,
@@ -62,7 +60,7 @@ class About extends React.Component {
               isLoading: false,
               isError: true,
             });
-        
+
 
         });
 
