@@ -28,7 +28,7 @@ class About extends React.Component {
         repoList: data,
         isLoading: false,
       });
-    });
+    })
 
       .catch(() => {
         this.setState({
