@@ -2,8 +2,9 @@ import React from 'react';
 import {
   Octokit,
 } from '@octokit/rest';
-import styles from './About.module.css';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import styles from './About.module.css';
+
 
 const octokit = new Octokit();
 
@@ -12,9 +13,10 @@ class About extends React.Component {
   state = {
     isLoading: true,
     repoList: [],
-        isError: false,
-        userInfo: [],
-        username: 'MylnikovaO',
+    isError: false,
+    userInfo: [],
+    username: 'MylnikovaO',
+    avatarURL: [],
   };
 
   componentDidMount () {
@@ -76,31 +78,33 @@ class About extends React.Component {
         name,
         avatarURL,
       } = this.state;
-        return (
+
+
+    const Prelouder = 
+            (<div className={styles.info}>
+                  <h1 className={styles.name}>{name}</h1>
+            </div>);
+
+    const Err = (<div className={styles.repo}>
+                    <div>
+                      <img src={avatarURL} className={styles.repo_avatar} />
+                    </div>
+                    <div>
+                      <p className={styles.repo_text}> Мои репозитории:</p>
+                      <ol className={styles.repo_list}>
+                        {repoList.map(repo => (<li key={repo.id}>
+                          <a href={repo.id}
+                            className={styles.repo_name}>{repo.name}</a>
+                        </li>))}
+                      </ol>
+                    </div>
+                  </div>);            
+
+    return (
+
           <div className={styles.wrap}>
-            {isLoading ? <div className={styles.loader}>
-            <CircularProgress /> </div> :
-              <div className={styles.info}>
-                <h1 className={styles.name}>{name}</h1>
-                {isError ? <div className={styles.error}>Возникла ошибка</div> :
-                <div className={styles.repo}>
-                  <div>
-                    <img src={avatarURL} className={styles.repo_avatar} />
-                  </div>
-                  <div>
-                    <p className={styles.repo_text}> Мои репозитории:</p>
-                    <ol className={styles.repo_list}>
-                      {repoList.map(repo => (<li key={repo.id}>
-                        <a href={repo.id}
-                          className={styles.repo_name}>{repo.name}</a>
-                      </li>
-                    ))}
-                    </ol>
-                  </div>
-                </div>
-                }
-              </div>
-            }
+            {isLoading ? <div className={styles.loader}> <CircularProgress /> </div> : Prelouder}
+            {isError ? <div className={styles.error}>Возникла ошибка</div> : Err}
           </div>
         );
 
