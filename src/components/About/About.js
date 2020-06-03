@@ -77,12 +77,12 @@ class About extends React.Component {
         isError,
         name,
         avatarURL,
-      } = this.state,
+      } = this.state;
 
 
     Prelouder = (<div className={styles.info}>
                         <h1 className={styles.name}>{name}</h1>
-                      </div>),
+                      </div>);
 
 
     Err = (<div className={styles.repo}>
@@ -98,7 +98,7 @@ class About extends React.Component {
                         </li>))}
                       </ol>
                     </div>
-                  </div>),
+                  </div>);
 
     stylesLoader = <div className={styles.loader}> <CircularProgress /> </div>;
 
