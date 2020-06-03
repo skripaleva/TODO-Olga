@@ -77,15 +77,15 @@ class About extends React.Component {
         isError,
         name,
         avatarURL,
-      } = this.state,
+      } = this.state;
 
 
-    Prelouder = (<div className={styles.info}>
+    const Prelouder = (<div className={styles.info}>
                         <h1 className={styles.name}>{name}</h1>
-                      </div>),
+                      </div>);
 
 
-    Err = (<div className={styles.repo}>
+    const Err = (<div className={styles.repo}>
                     <div>
                       <img src={avatarURL} className={styles.repo_avatar} />
                     </div>
@@ -98,9 +98,9 @@ class About extends React.Component {
                         </li>))}
                       </ol>
                     </div>
-                  </div>),
+                  </div>);
 
-    stylesLoader = <div className={styles.loader}> <CircularProgress /> </div>;
+    const stylesLoader = <div className={styles.loader}> <CircularProgress /> </div>;
 
     return (
 
