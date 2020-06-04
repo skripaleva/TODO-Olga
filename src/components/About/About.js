@@ -100,7 +100,9 @@ class About extends React.Component {
                     </div>
                   </div>);
 
-    const stylesLoader = <div className={styles.loader}> <CircularProgress /> </div>;
+    const stylesLoader = (<div className={styles.loader}> 
+                          <CircularProgress /> 
+                         </div>);
 
     return (
 
