@@ -7,42 +7,36 @@ import IconButton from '@material-ui/core/IconButton';
 import PropTypes from 'prop-types'
 
 class Item extends React.Component {
-    componentDidMount() {
-        this.timerID = setInterval(() => console.log('componentDivMount'), 1000);
-    }
 
-    componentWillUnmount() {
-    	clearInterval(this.timerID);
-    }
 
     render() {
-    	const { value, isDone, onClickDone, id, onClickDelete } = this.props;
+        const { value, isDone, onClickDone, id, onClickDelete, onClickFilter } = this.props;
 
-    	return (<div className={styles.flex}>
-	<div>
-	  <Checkbox 
-	    checked={isDone}
-        color="default"
-        onClick={() => onClickDone(id)}
-    />
-	<label className={
-	classnames({
-	  [styles.item]: true,
-	  [styles.done]: isDone
-	})
-}>
-	{value}
-	</label>
-	</div>
-<div>
-     <IconButton aria-label="delete" >
-        <DeleteIcon 
-        	onClick={() => onClickDelete(id)}
-        />
-        </IconButton>
-	</div>
-</div>);
-	}
+        return (<div className={styles.flex}>
+            <div>
+                <Checkbox
+                    checked={isDone}
+                    color="default"
+                    onClick={() => onClickDone(id)}
+                />
+                <label className={
+                    classnames({
+                        [styles.item]: true,
+                        [styles.done]: isDone
+                    })
+                }>
+                    {value}
+                </label>
+            </div>
+            <div>
+                <IconButton aria-label="delete" >
+                    <DeleteIcon
+                        onClick={() => onClickDelete(id)}
+                    />
+                </IconButton>
+            </div>
+        </div>);
+    }
 };
 
 Item.defaultProps = {

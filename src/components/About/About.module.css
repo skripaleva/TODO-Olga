@@ -1,23 +1,37 @@
 .wrap {
-  width: 600px;
+  display: inline-block;
   background-color: white;
   padding: 10px;
   border: hidden;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
 }
+.link_github {
+  text-align: center;
+  font-size: 20px;
+}
+
+.img_github {
+  width: 20px;
+}
+
+.info {
+  display: flex;
+}
 
 .name {
   text-align: center;
 }
-    
+.bio {
+  text-align: center;
+  font-weight: lighter;
+}
 .repo {
-	display: flex;
-	justify-content: space-between;
-	width: 500px;
 	margin-top: 50px;
 }
-
+.avatar_wrap {
+  margin: 25px;
+}
 .repo_avatar {
 	height: 260px;
   width: 260px;
@@ -26,16 +40,18 @@
 .repo_text {
 	font-size: 25px;
 	font-weight: bold;
+  text-align: center;
 }
 
 .repo_name {
   color: #000;
   text-decoration: none;
   font-size: 20px;
+  font-weight: bold;
 }
 
-.repo_list {
-  padding: 0 0 0 30px;
+.selected {
+  font-weight: bold;
 }
 
 .repo_name:hover {
@@ -45,4 +61,30 @@
 
 .loader {
 	text-align: center;
+}
+.repo_language_color {
+  background-color: #563d7c;
+  position: relative;
+    top: 1px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 1px solid var(--color-repo-language-color-border);
+    border-radius: 50%;
+}
+.wrap_repo {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0 20px 0;
+}
+.repo_language_and_update {
+  display: flex;
+  font-size: 20px;
+}
+.repo_language {
+  margin-right: 20px;
+}
+.repo_description {
+  text-align: center;
+  font-size: 20px;
 }
