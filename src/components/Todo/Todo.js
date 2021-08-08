@@ -35,11 +35,11 @@ const Todo = () => {
 
 	useEffect(() => {
 		setFilterItems(items);
-	}, []);
+	}, [items]);
 
 	useEffect(() => {
 		onClickFilter(filter);
-	}, [items]);
+	}, [filter, items]);
 
 	useEffect(() => {
 		localStorage.setItem('items', JSON.stringify(items));

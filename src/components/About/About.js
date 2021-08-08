@@ -107,7 +107,7 @@ class About extends React.Component {
 
     const Description = (<div className={styles.info}>
       <div className={styles.avatar_wrap}>
-        <img src={avatarURL} className={styles.repo_avatar} />
+        <img src={avatarURL} className={styles.repo_avatar} alt='' />
       </div>
       <div>
         <h1 className={styles.name}>{name}</h1>

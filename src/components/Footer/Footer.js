@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './Footer.module.css';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 import Button from '@material-ui/core/Button';
@@ -18,16 +18,17 @@ const Footer = ({ count, onClickFilter, onClickDeleteAll }) => {
             <Button variant="contained" onClick={onClickDeleteAll}>Удалить все</Button>
         </div>
     )
+};
 
-    Footer.defaultProps = {
-        count: 0
-    };
+Footer.defaultProps = {
+    count: 0
+};
 
-    Footer.propTypes = {
-        count: PropTypes.number.isRequired,
-        onClickDeleteAll: PropTypes.func.isRequired,
-        onClickFilter: PropTypes.func.isRequired
-    };
-}
+Footer.propTypes = {
+    count: PropTypes.number.isRequired,
+    onClickDeleteAll: PropTypes.func.isRequired,
+    onClickFilter: PropTypes.func.isRequired
+};
+
 
 export default Footer;
