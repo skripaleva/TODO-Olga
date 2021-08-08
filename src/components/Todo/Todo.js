@@ -31,7 +31,7 @@ const Todo = () => {
 	const [items, setItems] = useState(initialState.items);
 	const [count, setCount] = useState(initialState.count);
 	const [filterItems, setFilterItems] = useState(initialState.items);
-	const [filter, setFilter] = useState('all');
+	// const [filter, setFilter] = useState('all');
 
 	useEffect(() => {
 		setFilterItems(items);
@@ -94,7 +94,7 @@ const Todo = () => {
 				filterItemList = initialState.items;
 		}
 		setFilterItems(filterItemList);
-		setFilter(e);
+		// setFilter(e);
 	}
 	const onClickDeleteAll = () => {
 		const emptyItemList = [];
