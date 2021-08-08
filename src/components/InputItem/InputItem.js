@@ -3,7 +3,7 @@ import styles from './InputItem.module.css';
 import TextField from '@material-ui/core/TextField';
 import IconButton from '@material-ui/core/IconButton';
 import AddBoxIcon from '@material-ui/icons/AddBox';
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 
 class InputItem extends React.Component {
 	state = {
@@ -33,7 +33,7 @@ class InputItem extends React.Component {
 				inputValue: '',
 				errorMessage: '',
 				error: false
-			})
+			});
 			this.props.onClickAdd(this.state.inputValue)
 		}
 	};
@@ -61,10 +61,10 @@ class InputItem extends React.Component {
 				<div>{this.state.errorMessage ? <div className={styles.input_error}>{this.state.errorMessage}</div> : null}</div>
 			</div>);
 	}
-};
+}
 
-InputItem.propTypes = {
-	onButtonClick: PropTypes.func.isRequired
-};
+// InputItem.propTypes = {
+// 	onButtonClick: PropTypes.func.isRequired
+// };
 
 export default InputItem;

@@ -37,9 +37,9 @@ const Todo = () => {
 		setFilterItems(items);
 	}, [items]);
 
-	useEffect(() => {
-		onClickFilter(filter);
-	}, [filter, items]);
+	// useEffect(() => {
+	// 	onClickFilter(filter);
+	// }, [filter, items]);
 
 	useEffect(() => {
 		localStorage.setItem('items', JSON.stringify(items));
@@ -95,11 +95,11 @@ const Todo = () => {
 		}
 		setFilterItems(filterItemList);
 		setFilter(e);
-	}
+	};
 	const onClickDeleteAll = () => {
 		const emptyItemList = [];
 		setItems(emptyItemList);
-	}
+	};
 
 	return (
 		<div className={styles.content}>

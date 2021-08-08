@@ -34,7 +34,7 @@ class About extends React.Component {
       {
         data,
       }) => {
-      console.log(data)
+      console.log(data);
       this.setState({
         repoList: data,
         isLoading: false,
@@ -58,7 +58,7 @@ class About extends React.Component {
         totalRepoCount: response.data.public_repos
       });
     })
-      .catch(err => {
+      .catch(() => {
         this.setState({
           isLoading: false,
           isError: true,
@@ -66,7 +66,7 @@ class About extends React.Component {
       });
   }
   handleChangePage = (e, value) => {
-    this.setState({ currentPage: value })
+    this.setState({ currentPage: value });
     octokit.repos.listForUser({
       username: this.state.username,
       per_page: this.state.pageSize,
@@ -164,6 +164,6 @@ class About extends React.Component {
       </div>
     );
   }
-};
+}
 
 export default About;

@@ -23,13 +23,13 @@ const ItemList = ({ items, onClickDone, onClickDelete, onClickFilter }) => {
 			</li>)}
 		</ul>
 	}
-}
+};
 
 Item.propTypes = {
 	items: PropTypes.array,
 	onClickDone: PropTypes.func.isRequired,
 	onClickDelete: PropTypes.func.isRequired,
 	onClickFilter: PropTypes.func.isRequired
-}
+};
 
 export default ItemList;

@@ -37,11 +37,11 @@ class Item extends React.Component {
             </div>
         </div>);
     }
-};
+}
 
 Item.defaultProps = {
     value: 'У вас не запланировано новых дел'
-}
+};
 
 Item.propTypes = {
     value: PropTypes.string.isRequired,
