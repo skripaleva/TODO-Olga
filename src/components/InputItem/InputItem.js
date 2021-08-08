@@ -26,7 +26,6 @@ class InputItem extends React.Component {
 				errorMessage: 'Такая задача уже существует',
 				inputValue: '',
 				error: false
-
 			})
 		}
 		else if (this.state.inputValue !== '' && !replayValue) {
@@ -40,7 +39,6 @@ class InputItem extends React.Component {
 	};
 
 	render() {
-		const { onClickAdd, items } = this.props;
 
 		return (
 			<div>
@@ -66,8 +64,7 @@ class InputItem extends React.Component {
 };
 
 InputItem.propTypes = {
-	onClickAdd: PropTypes.func.isRequired,
-	onButtonClick: PropTypes.func
+	onButtonClick: PropTypes.func.isRequired
 };
 
 export default InputItem;

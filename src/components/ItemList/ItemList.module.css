@@ -1,8 +1,22 @@
 .wrap {
-    margin-left: 0;
-    padding-left: 0;
+  margin-left: 0;
+  padding-left: 0;
 }
-
 .mark {
-    list-style-type: none;
+  list-style-type: none;
 } 
+.todo_img {
+  width: 350px;
+  height: 300px;
+}
+.wrap_no_cases {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.no_cases_text {
+  font-size: 19px;
+  margin: 20px
+}

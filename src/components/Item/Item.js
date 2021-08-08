@@ -10,7 +10,7 @@ class Item extends React.Component {
 
 
     render() {
-        const { value, isDone, onClickDone, id, onClickDelete, onClickFilter } = this.props;
+        const { value, isDone, onClickDone, id, onClickDelete } = this.props;
 
         return (<div className={styles.flex}>
             <div>

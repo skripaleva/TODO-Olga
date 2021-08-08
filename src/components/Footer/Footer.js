@@ -4,11 +4,10 @@ import ButtonGroup from '@material-ui/core/ButtonGroup';
 import Button from '@material-ui/core/Button';
 import PropTypes from 'prop-types'
 
-const Footer = ({ count, onClickFilter, deleteAll }) => {
-
+const Footer = ({ count, onClickFilter, onClickDeleteAll }) => {
     return (
         <div className={styles.wrap}>
-            <Button variant="contained">Осталось: {count}</Button>
+            <Button variant="contained">Количество: {count}</Button>
             <div>
                 <ButtonGroup variant="contained">
                     <Button id='all' onClick={(e) => onClickFilter('all')}>Все</Button>
@@ -16,19 +15,18 @@ const Footer = ({ count, onClickFilter, deleteAll }) => {
                     <Button id='completed' onClick={(e) => onClickFilter('completed')}>Выполненные</Button>
                 </ButtonGroup>
             </div>
-            <Button variant="contained">Удалить все</Button>
+            <Button variant="contained" onClick={onClickDeleteAll}>Удалить все</Button>
         </div>
     )
-
-
-
 
     Footer.defaultProps = {
         count: 0
     };
 
     Footer.propTypes = {
-        count: PropTypes.number.isRequired
+        count: PropTypes.number.isRequired,
+        onClickDeleteAll: PropTypes.func.isRequired,
+        onClickFilter: PropTypes.func.isRequired
     };
 }
 

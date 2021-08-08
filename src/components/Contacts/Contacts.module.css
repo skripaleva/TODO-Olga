@@ -6,4 +6,35 @@
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
 }
-
+.contacts_img {
+  width: 50px;
+  margin: 20px;
+}
+.contacts {
+  display: flex;
+}
+.contacts_text {
+  align-self: center;
+  font-size: 20px;
+}
+.contacts_title {
+  text-align: center;
+}
+@media (max-width: 280px) {
+  .wrap {
+    width: 530px;
+    margin-top: 20px;
+  }
+}
+@media (min-width: 320px) and (max-width: 414px) {
+  .wrap {
+    width: 650px;
+    margin-top: 20px;
+  }
+}
+@media (min-width: 541px) and (max-width: 768px) {
+  .wrap {
+    width: 650px;
+    margin-top: 20px;
+  }
+}

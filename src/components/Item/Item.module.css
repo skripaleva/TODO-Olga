@@ -1,12 +1,10 @@
 .item {
 	color: #333;
 }
-
 .done {
 	font-style: italic;
 }
-
 .flex {
-    display: flex;
-    justify-content: space-between;
-  }
+  display: flex;
+  justify-content: space-between;
+}
